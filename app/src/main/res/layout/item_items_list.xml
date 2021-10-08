@@ -7,11 +7,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:onClick="@{() -> clickListener.onClick(data)}">
+        android:onClick="@{() -> clickListener.onClick(data)}"
+        style="@style/Widget.App.CardView">
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="5dp"
             android:shrinkColumns="0">
             <TableRow
                 android:gravity="start">

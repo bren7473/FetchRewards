@@ -21,4 +21,11 @@ class ItemListViewModel @Inject constructor(
             itemListRepository.refreshItemList()
         }
     }
+
+    suspend fun refresh() {
+        viewModelScope.launch(Dispatchers.IO) {
+            itemListRepository.refreshItemList()
+        }
+
+    }
 }

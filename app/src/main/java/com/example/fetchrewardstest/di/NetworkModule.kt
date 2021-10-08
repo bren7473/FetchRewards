@@ -1,6 +1,7 @@
 package com.example.fetchrewardstest.di
 
 import com.example.fetchrewardstest.BuildConfig
+import com.example.fetchrewardstest.data.Constants
 import com.example.fetchrewardstest.network.ItemListService
 import dagger.Module
 import dagger.Provides
@@ -34,7 +35,7 @@ object NetworkModule {
     @Provides
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit = Retrofit.Builder()
         .addConverterFactory(MoshiConverterFactory.create())
-        .baseUrl("https://fetch-hiring.s3.amazonaws.com/")
+        .baseUrl(Constants.URL)
         .client(okHttpClient)
         .build()
 
